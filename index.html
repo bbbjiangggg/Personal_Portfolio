@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta http-equiv="X-UA-Compatible" content="IE-edge"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bowen Jiang Website</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/b22d4c3bd3.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src="images/logo.png" class="logo">
+            <ul id="sidemenu">
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Experiences</a></li>
+                <li><a href="#portfolio">Hobbies</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+            </ul>
+            <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+        </nav>
+        <div class="header-text">
+            <p>Not a Typical Biomedical Engineer</p>
+            <h1>Hi, I'm <span>Bowen Jiang</span><br>  from Duke University</h1>
+        </div>
+    </div>
+</div>
+
+<!-- -------- about -------- -->
+<div id="about">
+    <div class="container">
+        <div class="row"> 
+            <div class="about-col-1">
+                <img src="images/user.JPG">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p> I am a junior at Duke studying Biomedical Engineering. My interdisciplinary expertise spans wet lab research, 
+                    computational biology, and AI/ML applications in life sciences. From engineering iPSC-derived cells 
+                    to fine-tuning protein language models, I bridge the gap between biological discovery and 
+                    technological innovation to tackle complex biomedical challenges.</p>
+
+                <div class="tab-titles">
+                    <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skill</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>Programming & ML</span><br> Python (Pandas, PyTorch, PyLabRobot), CAD, HTML, Machine Learning</li>
+                        <li><span>Protein Language Models</span><br>ESM2 fine-tuning, LoRA/PEFT techniques, constraint learning</li>
+                        <li><span>Data Science & Analysis</span><br> scRNA-seq analysis, time series forecasting (Prophet), feature engineering</li>
+                        <li><span>Computational Biology</span><br> ImageJ, Cell Profiler, automation pipelines, Nanopore sequencing</li>
+                        <li><span>Wet Lab Techniques</span><br> iPSC culturing, bacterial transformations, Cell Painting Assay, molecular biology</li>
+                        
+                    </ul>
+                </div>
+                <div class="tab-contents" id="experience">
+                    <ul>
+                        <li><span>May 2025 - Aug 2025</span><br> <b><a href="#">Tetsuwan Scientific</a></b>, Intern</li>
+                        <li><span>Aug 2024 - Present</span><br> <b><a href="#">Chory Lab</a></b>, Student Researcher</li>
+                        <li><span>Jun 2024 - Aug 2024</span><br> <b><a href="https://www.broadinstitute.org/barrett-lab">Barrett Lab @ Broad Institute</a></b>, Summer Intern</li>
+                        <li><span>Apr 2024 - Present</span><br> <b><a href="https://sites.duke.edu/navid/">Navid NaderiAlizadeh Lab</a></b>, Student Researcher</li>
+                        <li><span>Oct 2023 - Present</span><br> <b><a href="https://musahlab.pratt.duke.edu/">Musah Lab</a></b>, Independent Study</li>
+                        <li><span>Jun 2023 - Aug 2023</span><br> <b><a href="https://www.apple.com.cn/">Apple Greater China</a></b>, DMP Intern</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>2023 - 2027</span><br> 
+                            <b><a href="https://pratt.duke.edu/">DUKE UNIVERSITY</a></b> <br>
+                            <ul class="nested-list">
+                                <li><u>Selected Courses</u></li>
+                                    Linear Algebra & Application, Data Structures & Algorithms, 
+                                    Microelectronic Devices and Circuits, Quantitative Physiology and Biostatistical Applications, 
+                                    Deep Neural Networks, PDE & ODE
+                                <li><u>Leadership & Extracurriculars</u></li>
+                                Duke Chinese Student Association, Co-President <br>
+                                <!-- Duke BioByte, Head of Tech & Member of the Bio+AI Team -->
+                            </ul>
+                        </li>
+                        <li><span>2019 - 2023</span><br>
+                            <b><a href="https://www.wra.net/">WESTERN RESERVE ACADEMY</a></b><br>
+                            <ul class="nested-list">
+                                    <li>Diploma Honors in Social Science, Science, Modern & Classical Languages, and Mathematics</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- -------- Projects -------- -->
+<div id="projects">
+    <div class="container">
+        <h1 class="sub-title">Selected Experiences</h1>
+        <div class="project-list">
+            <div>
+                <i class="fa-solid fa-robot"></i>
+                <h2>Tetsuwan Scientific</h2>
+                <img src="images/tetsuwan.PNG">
+                <p>Helped building AI-scientist to automate life science research in an 8-person startup team. 
+                    I automated the bacterial trasnformation protocol, Nanopore sequencing pipeline, and colony picking through integrating 3D printed custom tools with liquid handler robots and developing computer vision 
+                    approaches. I also contributed to the first lab automation community wikipedia page. </p>
+                <a href="https://www.linkedin.com/feed/update/urn:li:activity:7368795719849123840/">Lab Auto Wiki</a>
+                <!-- <a href="#">See the Paper</a> -->
+            </div>
+            <div>
+                <i class="fa-solid fa-dna"></i>
+                <h2>Chory Lab</h2>
+                <img src="images/chory.png">
+                <p>Applying robotics-aided directed evolution to study and engineer chromatin binding proteins. 
+                    I worked on bacterial transformations, contributed to PyLabRobot (PLR), 
+                    and automated plenty assays on robot, advancing the field of automated protein engineering and synthetic biology.</p>
+                <!-- <a href="#">See the Paper</a> -->
+            </div>
+            <div>
+                <i class="fa-solid fa-brain"></i>
+                <h2>Barrett Lab</h2>
+                <img src="images/barret_lab.png">
+                <p> I worked at the Barrett lab throughout the summer at Broad and Harvard through the Harvard Stem Cell Institute Internship. I utilized iPSC-derived neural progenitor cells to study Down Syndrome-specific morphology, 
+                    conducted Cell Painting Assay, and applied machine learning to extract key traits related to DS, reaching 83% prediction accuracy.</p>
+                <a href="https://uraf.harvard.edu/sites/projects.iq.harvard.edu/files/uraf/files/2024_hsurv_abstract_book_final.pdf">HSURV Abstract Book pg. 44</a>
+            </div>
+            <div>
+                <i class="fa-solid fa-code"></i>
+                <h2>Navid Lab</h2>
+                <img src="images/pll.jpg">
+                <p>I formulated a primal-dual constraint learning problem to tackle protein pathogenicity prediction. To 
+                    achieve the desired outcome, I fine-tuned ESM2 models with PEFT LoRA and constraint relaxation to improve results by 5%. 
+                    We are currently preparing the manuscript for submission.</p>
+                <!-- <a href="#">See the Paper</a> -->
+            </div>
+            <div>
+                <i class="fa-solid fa-vial"></i>
+                <h2>Musah Lab</h2>
+                <img src="images/musah_lab.png">
+                <p>My lab implements an innovative way to engineer functional podocyte cells using human iPSCs. Using them as models to study Chronic Kidney Disease (CKD), 
+                    I identified 6 important genetic pathways related to podocyte injury from scRNA-seq data that may serve as treatment targets for CKD.</p>
+                <!-- <a href="#">See the Paper</a> -->
+            </div>
+            <div>
+                <i class="fa-brands fa-apple"></i>
+                <h2>Apple</h2>
+                <img src="images/apple.jpg">
+                <p> Working with the data team at Apple Greater China, I constructed a Prophet-based ML model to predict 15-week Mac sales, improving MAPE by 56%.
+                    I performed feature engineering with Pandas and tested Lightgbm model to predict weekly iPhone sales. 
+                    Successfully incorporated the final Prophet model into the data team's prediction workflow.</p>
+                <!-- <a href="#">Learn More</a> -->
+            </div>
+        </div>
+        <!-- <a href="#" class="btn">See More</a> -->
+    </div>
+</div>
+
+<!-- -------- portfolio -------- -->
+ <div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">My Hobbies</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="images/sport.png">
+                <div class="layer">
+                    <h3>Sports</h3>
+                    <p>I am a big fan of all sports. Check out some of my sports videos here!</p>
+                    <a href="https://youtu.be/MY9_nrhT4Ec"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/art.png">
+                <div class="layer">
+                    <h3>Piano & Art</h3>
+                    <p>Creativity takes courage. Check out some of my paintings in this archive I built for my high school!</p>
+                    <a href="https://www.artworkarchive.com/profile/wra/portfolio?public_piece_search=bowen&general_filter="><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/travel.png">
+                <div class="layer">
+                    <h3>Traveling</h3>
+                    <p>Life is a daring adventure. Check out my latest travel video in Xinjiang!</p>
+                    <a href="https://www.youtube.com/watch?v=BxEX9-St0Fo"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+ </div>
+
+<!-- -------- contact -------- -->
+ <div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fa-regular fa-paper-plane"></i> bj142@duke.edu</p>
+                <p><i class="fa-solid fa-phone"></i> 330-734-7051</p>
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/in/bowen-jiang-3229a1257?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://www.instagram.com/bowenjiang26?igsh=MTZjZjFzNGk5dzNpNQ%3D%3D&utm_source=qr"><i class="fa-brands fa-square-instagram"></i></a>
+                    <a href="https://x.com/bowen67888758?s=21&t=4vuplVysKJ8gOeiuINLu3A"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="https://www.facebook.com/share/KNh178pu6eNBMzbc/?mibextid=LQQJ4d"><i class="fa-brands fa-facebook"></i></a>
+                </div>
+                <a href="images/BowenJiang-CV.pdf" download class="btn btn2">Download CV</a>
+            </div>
+            <div class="contact-right">
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="Email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="Submit" class="btn btn2">Submit</button>
+                </form>
+                <span id="msg"></span>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p> Copyright <i class="fa-regular fa-copyright"></i> Bowen Jiang</p>
+    </div>
+ </div>
+
+
+<script>
+
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link")
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab")
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab")
+    }
+
+</script>
+
+<script>
+
+    var sidemenu = document.getElementById("sidemenu");
+
+    function openmenu(){
+        sidemenu.style.right = "0";
+    }
+    function closemenu(){
+        sidemenu.style.right = "-200px";
+    }
+
+</script>
+
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbyGife_zqiNKMyvrqfBkmEbPE3Mos6UWgqp03PVvdGw2wdmKvF3qzTIAleIrRx5RoOe/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById("msg")
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML = "Message Sent Successfully!"
+            setTimeout(function(){
+                msg.innerHTML = ""
+            }, 5000)
+            form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+</script>
+    
+</body>
+</html>
