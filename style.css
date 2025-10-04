@@ -154,6 +154,18 @@ nav ul li a:hover::after{
     text-decoration: none;
     color: #d4d4d4;
 }
+.tab-contents ul li .project-title-link a{
+    color: #b54769;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+.tab-contents ul li .project-title-link a:hover{
+    color: #ff004f;
+}
+.tab-contents ul li .project-title-link a i{
+    font-size: 12px;
+    margin-left: 5px;
+}
 
 /* -------- projects --------  */
 #projects{

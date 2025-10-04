@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TryIt - Virtual Try On App</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            box-sizing: border-box;
+        }
+        body {
+            background: #080808;
+            color: #fff;
+        }
+        .back-link {
+            position: fixed;
+            top: 30px;
+            left: 40px;
+            z-index: 100;
+        }
+        .back-link a {
+            color: #ababab;
+            text-decoration: none;
+            font-size: 16px;
+            transition: color 0.3s;
+        }
+        .back-link a:hover {
+            color: #ff004f;
+        }
+        .back-link i {
+            margin-right: 8px;
+        }
+        .project-intro {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: #080808;
+            padding: 0 40px;
+            margin-top: -60px;
+        }
+        .project-intro h1 {
+            font-size: 60px;
+            color: white;
+            margin-bottom: 20px;
+        }
+        .project-intro p {
+            font-size: 18px;
+            color: #ababab;
+            line-height: 1.6;
+            max-width: 800px;
+        }
+        .project-detail {
+            padding: 80px 0;
+            background: #080808;
+        }
+        .version-section {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin: 100px auto;
+            max-width: 1200px;
+            padding: 0 40px;
+            gap: 60px;
+        }
+        .version-content {
+            flex: 1;
+        }
+        .version-content h2 {
+            font-size: 36px;
+            color: #ff004f;
+            margin-bottom: 15px;
+        }
+        .version-content p {
+            font-size: 16px;
+            color: #ababab;
+            line-height: 1.8;
+        }
+        .version-video {
+            flex: 1;
+            max-width: 300px;
+        }
+        .video-wrapper {
+            position: relative;
+            width: 100%;
+            height: 500px;
+            background: #000;
+            border-radius: 15px;
+            overflow: hidden;
+        }
+        .video-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 15px;
+            pointer-events: auto;
+        }
+        .version-section.reverse {
+            flex-direction: row-reverse;
+        }
+        @media only screen and (max-width: 900px) {
+            .project-intro h1 {
+                font-size: 40px;
+            }
+            .version-section {
+                flex-direction: column !important;
+                margin: 60px auto;
+                gap: 40px;
+            }
+            .version-content h2 {
+                font-size: 28px;
+            }
+            .version-video {
+                max-width: 350px;
+            }
+            .video-wrapper {
+                height: 450px;
+            }
+        }
+    </style>
+    <script src="https://kit.fontawesome.com/b22d4c3bd3.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="back-link">
+        <a href="index.html"><i class="fa-solid fa-arrow-left"></i>Back to Home</a>
+    </div>
+
+    <div class="project-detail">
+        <div class="project-intro">
+            <h1>TryIt</h1>
+            <p>A virtual try on app that allows a prompt-based, gamified, modular, and social virtual try on experience to explore endless personal fashion possibilities.</p>
+        </div>
+
+        <!-- Version 0 -->
+        <div class="version-section">
+            <div class="version-content">
+                <h2>Version 0</h2>
+                <p>Started on July 2nd, 2025, inspired by the challenge of visualizing fashion choices. Built the core MVVM architecture in Swift with basic features: avatar photo upload, closet management, and simple placeholder overlays for try-on visualization.</p>
+            </div>
+            <div class="version-video">
+                <div class="video-wrapper">
+                    <iframe src="https://www.youtube.com/embed/XEva6HLgO_g"
+                            title="TryIt v0"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+        </div>
+
+        <!-- Version 0.5 -->
+        <div class="version-section reverse">
+            <div class="version-content">
+                <h2>Version 0.5</h2>
+                <p>Improved rendering quality and refined the UI. Integrated OpenAI API for AI-powered style generation and replaced placeholder overlays with real clothing images for more realistic try-on visualization.</p>
+            </div>
+            <div class="version-video">
+                <div class="video-wrapper">
+                    <iframe src="https://www.youtube.com/embed/SLXIiBd7uTU"
+                            title="TryIt v0.5"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+        </div>
+
+        <!-- Version 1 -->
+        <div class="version-section">
+            <div class="version-content">
+                <h2>Version 1</h2>
+                <p>First major version with realistic try-on capabilities. Deployed image preprocessing models (CIHP, OpenPose, U2Net) and VTON-HD on Nebius virtual machine with GPU access. Integrated Amazon S3 for image storage and built custom API for real-time communication between the mobile app and cloud services.</p>
+            </div>
+            <div class="version-video">
+                <div class="video-wrapper">
+                    <iframe src="https://www.youtube.com/embed/SjBB-Nnoc7M"
+                            title="TryIt v1"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+        </div>
+
+        <!-- Version 2 -->
+        <div class="version-section reverse">
+            <div class="version-content">
+                <h2>Version 2</h2>
+                <p>Pivoted to Gemini Flash 2.5 API for simpler and more efficient try-on image generation. Enhanced the AI style explanation feature to provide clearer fashion insights.</p>
+            </div>
+            <div class="version-video">
+                <div class="video-wrapper">
+                    <iframe src="https://www.youtube.com/embed/5WsoNanuKpE"
+                            title="TryIt v2"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+        </div>
+
+        <!-- Version 3 -->
+        <div class="version-section">
+            <div class="version-content">
+                <h2>Version 3</h2>
+                <p>Added multi-garment switching capability for more realistic outfit visualization. Secured first official collaboration with Duke University Store, marking an important step toward real-world application.</p>
+            </div>
+            <div class="version-video">
+                <div class="video-wrapper">
+                    <iframe src="https://www.youtube.com/embed/FnsHZ4bnSqU"
+                            title="TryIt v3"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
