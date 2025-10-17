@@ -5,6 +5,7 @@
     <!-- <meta http-equiv="X-UA-Compatible" content="IE-edge"> -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bowen Jiang Website</title>
+    <link rel="icon" type="image/png" href="favicon/home.png">
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/b22d4c3bd3.js" crossorigin="anonymous"></script>
 </head>
@@ -248,6 +249,36 @@
         event.currentTarget.classList.add("active-link");
         document.getElementById(tabname).classList.add("active-tab")
     }
+
+    // Check if returning from a project page and auto-open Side Project tab
+    window.addEventListener('DOMContentLoaded', function() {
+        if (window.location.hash === '#about-sideproject') {
+            // Remove active classes from all tabs
+            for(let tablink of tablinks){
+                tablink.classList.remove("active-link")
+            }
+            for(let tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab")
+            }
+
+            // Find and activate the Side Project tab
+            var sideProjectTab = Array.from(tablinks).find(tab =>
+                tab.getAttribute('onclick') === "opentab('sideproject')"
+            );
+            if (sideProjectTab) {
+                sideProjectTab.classList.add("active-link");
+            }
+
+            // Show the Side Project content
+            var sideProjectContent = document.getElementById('sideproject');
+            if (sideProjectContent) {
+                sideProjectContent.classList.add("active-tab");
+            }
+
+            // Jump directly to the about section
+            document.getElementById('about').scrollIntoView();
+        }
+    });
 
 </script>
 
