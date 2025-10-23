@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CalendarOCR - Poster to Calendar Event</title>
+    <link rel="icon" type="image/png" href="calendarOCR/icon.png">
     <style>
         * {
             margin: 0;
@@ -118,9 +119,116 @@
                 transform: translateY(-5px) rotate(-45deg);
             }
         }
+        .project-detail {
+            padding: 80px 0;
+            background: #080808;
+        }
+        .app-showcase {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin: 100px auto;
+            max-width: 1200px;
+            padding: 0 40px;
+            gap: 60px;
+        }
+        .app-content {
+            flex: 1;
+        }
+        .app-content h2 {
+            font-size: 36px;
+            color: #ff004f;
+            margin-bottom: 15px;
+        }
+        .app-content p {
+            font-size: 16px;
+            color: #ababab;
+            line-height: 1.8;
+        }
+        .app-icon {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .app-icon img {
+            max-width: 300px;
+            width: 100%;
+            height: auto;
+            border-radius: 20%;
+            box-shadow: 0 10px 40px rgba(255, 0, 79, 0.3);
+        }
+        .demo-section {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin: 100px auto;
+            max-width: 1200px;
+            padding: 0 40px;
+            gap: 60px;
+        }
+        .demo-content {
+            flex: 1;
+        }
+        .demo-content h2 {
+            font-size: 36px;
+            color: #ff004f;
+            margin-bottom: 15px;
+        }
+        .demo-content p {
+            font-size: 16px;
+            color: #ababab;
+            line-height: 1.8;
+        }
+        .demo-video {
+            flex: 1;
+            max-width: 300px;
+        }
+        .video-wrapper {
+            position: relative;
+            width: 100%;
+            height: 500px;
+            background: #000;
+            border-radius: 15px;
+            overflow: hidden;
+        }
+        .video-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 15px;
+            pointer-events: auto;
+        }
         @media only screen and (max-width: 900px) {
             .project-intro h1 {
                 font-size: 40px;
+            }
+            .app-showcase {
+                flex-direction: column !important;
+                margin: 60px auto;
+                gap: 40px;
+            }
+            .app-content h2 {
+                font-size: 28px;
+            }
+            .app-icon img {
+                max-width: 250px;
+            }
+            .demo-section {
+                flex-direction: column !important;
+                margin: 60px auto;
+                gap: 40px;
+            }
+            .demo-content h2 {
+                font-size: 28px;
+            }
+            .demo-video {
+                max-width: 350px;
+            }
+            .video-wrapper {
+                height: 450px;
             }
         }
     </style>
@@ -131,12 +239,43 @@
         <a href="index.html#about-sideproject"><i class="fa-solid fa-arrow-left"></i>Back to Home</a>
     </div>
 
-    <div class="project-intro">
-        <h1>CalendarOCR</h1>
-        <p>An app that translates poster events from phone camera to calendar event and can be saved on device calendar. Ideal for college events.</p>
-        <div class="scroll-indicator">
-            <span>Scroll</span>
-            <div class="scroll-arrow"></div>
+    <div class="project-detail">
+        <div class="project-intro">
+            <h1>CalendarOCR</h1>
+            <p>An app that translates poster events from phone camera to calendar event and can be saved on device calendar. Ideal for college events.</p>
+            <div class="scroll-indicator">
+                <span>Scroll</span>
+                <div class="scroll-arrow"></div>
+            </div>
+        </div>
+
+        <!-- App Showcase -->
+        <div class="app-showcase">
+            <div class="app-content">
+                <h2>About the App</h2>
+                <p>Built with React Native, CalendarOCR leverages Google Cloud Vision API for precise text extraction from event posters and GPT-4 API for intelligent understanding of event details. Simply snap a photo of any event poster, and the app instantly processes the information and saves it to your default calendar with all the relevant details.</p>
+            </div>
+            <div class="app-icon">
+                <img src="calendarOCR/icon.png" alt="CalendarOCR App Icon">
+            </div>
+        </div>
+
+        <!-- Demo Video -->
+        <div class="demo-section">
+            <div class="demo-video">
+                <div class="video-wrapper">
+                    <iframe src="https://www.youtube.com/embed/Ip7Lu7yrrYE"
+                            title="CalendarOCR Demo"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+            <div class="demo-content">
+                <h2>See it in Action</h2>
+                <p>Watch how CalendarOCR seamlessly transforms event posters into calendar entries. The app recognizes dates, times, locations, and event descriptions, creating perfectly formatted calendar events in seconds.</p>
+            </div>
         </div>
     </div>
 </body>
