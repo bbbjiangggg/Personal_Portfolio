@@ -201,6 +201,54 @@
             border-radius: 15px;
             pointer-events: auto;
         }
+        .features-section {
+            margin: 100px auto;
+            max-width: 1200px;
+            padding: 0 40px;
+        }
+        .features-section h2 {
+            font-size: 36px;
+            color: #ff004f;
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px;
+        }
+        .feature-item {
+            padding: 30px;
+            background: #1a1a1a;
+            border-radius: 12px;
+            border: 1px solid #262626;
+        }
+        .feature-item h3 {
+            font-size: 20px;
+            color: #ff004f;
+            margin-bottom: 15px;
+        }
+        .feature-item p {
+            font-size: 14px;
+            color: #ababab;
+            line-height: 1.8;
+        }
+        .tech-stack {
+            margin: 100px auto;
+            max-width: 1200px;
+            padding: 0 40px;
+            text-align: center;
+        }
+        .tech-stack h2 {
+            font-size: 36px;
+            color: #ff004f;
+            margin-bottom: 30px;
+        }
+        .tech-stack p {
+            font-size: 16px;
+            color: #ababab;
+            line-height: 1.8;
+        }
         @media only screen and (max-width: 900px) {
             .project-intro h1 {
                 font-size: 40px;
@@ -229,6 +277,9 @@
             }
             .video-wrapper {
                 height: 450px;
+            }
+            .features-grid {
+                grid-template-columns: 1fr;
             }
         }
     </style>
@@ -276,6 +327,35 @@
                 <h2>See it in Action</h2>
                 <p>Watch how CalendarOCR seamlessly transforms event posters into calendar entries. The app recognizes dates, times, locations, and event descriptions, creating perfectly formatted calendar events in seconds.</p>
             </div>
+        </div>
+
+        <!-- Features Section -->
+        <div class="features-section">
+            <h2>Key Features</h2>
+            <div class="features-grid">
+                <div class="feature-item">
+                    <h3>Smart Text Extraction</h3>
+                    <p>Utilizes Google Cloud Vision API to accurately extract text from event posters, even with complex layouts or stylized fonts.</p>
+                </div>
+                <div class="feature-item">
+                    <h3>Intelligent Event Parsing</h3>
+                    <p>GPT-4 API intelligently understands event details from extracted text, identifying dates, times, locations, and descriptions with high accuracy.</p>
+                </div>
+                <div class="feature-item">
+                    <h3>One-Tap Calendar Integration</h3>
+                    <p>Seamlessly saves events to your device's default calendar app with all relevant information properly formatted and ready to use.</p>
+                </div>
+                <div class="feature-item">
+                    <h3>Perfect for College Life</h3>
+                    <p>Designed specifically for college students to quickly capture and organize campus events, lectures, club meetings, and social gatherings.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tech Stack Section -->
+        <div class="tech-stack">
+            <h2>Technology Stack</h2>
+            <p>Built with React Native for cross-platform mobile development. Integrates Google Cloud Vision API for OCR text extraction and GPT-4 API for natural language understanding. Native calendar integration for seamless event saving to device calendars.</p>
         </div>
     </div>
 </body>

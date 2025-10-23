@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Period Tracking Website</title>
+    <title>Period Tracker - Menstrual Cycle Tracking Web App</title>
+    <link rel="icon" type="image/png" href="periodTracking/calendar.png">
     <style>
         * {
             margin: 0;
@@ -62,6 +63,36 @@
             max-width: 800px;
             opacity: 0;
             animation: fadeInUp 1s ease 0.3s forwards;
+            margin-bottom: 15px;
+        }
+        .privacy-note {
+            font-size: 14px;
+            color: #ff004f;
+            opacity: 0;
+            animation: fadeInUp 1s ease 0.5s forwards;
+            margin-top: 10px;
+        }
+        .github-link {
+            margin-top: 20px;
+            opacity: 0;
+            animation: fadeInUp 1s ease 0.7s forwards;
+        }
+        .github-link a {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 24px;
+            background: transparent;
+            border: 2px solid #ff004f;
+            color: #ff004f;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 14px;
+            transition: all 0.3s;
+        }
+        .github-link a:hover {
+            background: #ff004f;
+            color: #fff;
         }
         .scroll-indicator {
             position: absolute;
@@ -118,9 +149,131 @@
                 transform: translateY(-5px) rotate(-45deg);
             }
         }
+        .project-detail {
+            padding: 80px 0;
+            background: #080808;
+        }
+        .screenshots-section {
+            margin: 100px auto;
+            max-width: 1400px;
+            padding: 0 40px;
+        }
+        .screenshots-section h2 {
+            font-size: 36px;
+            color: #ff004f;
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        .screenshots-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 80px;
+            margin-bottom: 40px;
+        }
+        .screenshot-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .screenshot-wrapper {
+            width: 100%;
+            max-width: 600px;
+            background: #1a1a1a;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(255, 0, 79, 0.2);
+            transition: transform 0.3s;
+        }
+        .screenshot-wrapper:hover {
+            transform: translateY(-5px);
+        }
+        .screenshot-wrapper img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        .screenshot-description {
+            margin-top: 20px;
+            text-align: center;
+        }
+        .screenshot-description h3 {
+            font-size: 24px;
+            color: #fff;
+            margin-bottom: 10px;
+        }
+        .screenshot-description p {
+            font-size: 16px;
+            color: #ababab;
+            line-height: 1.6;
+            max-width: 600px;
+        }
+        .features-section {
+            margin: 100px auto;
+            max-width: 1200px;
+            padding: 0 40px;
+        }
+        .features-section h2 {
+            font-size: 36px;
+            color: #ff004f;
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px;
+        }
+        .feature-item {
+            padding: 30px;
+            background: #1a1a1a;
+            border-radius: 12px;
+            border: 1px solid #262626;
+        }
+        .feature-item h3 {
+            font-size: 20px;
+            color: #ff004f;
+            margin-bottom: 15px;
+        }
+        .feature-item p {
+            font-size: 14px;
+            color: #ababab;
+            line-height: 1.8;
+        }
+        .tech-stack {
+            margin: 100px auto;
+            max-width: 1200px;
+            padding: 0 40px;
+            text-align: center;
+        }
+        .tech-stack h2 {
+            font-size: 36px;
+            color: #ff004f;
+            margin-bottom: 30px;
+        }
+        .tech-stack p {
+            font-size: 16px;
+            color: #ababab;
+            line-height: 1.8;
+        }
         @media only screen and (max-width: 900px) {
             .project-intro h1 {
                 font-size: 40px;
+            }
+            .screenshots-grid {
+                gap: 60px;
+            }
+            .screenshot-wrapper {
+                max-width: 400px;
+            }
+            .screenshot-description h3 {
+                font-size: 20px;
+            }
+            .screenshot-description p {
+                font-size: 14px;
+                max-width: 400px;
+            }
+            .features-grid {
+                grid-template-columns: 1fr;
             }
         }
     </style>
@@ -131,12 +284,84 @@
         <a href="index.html#about-sideproject"><i class="fa-solid fa-arrow-left"></i>Back to Home</a>
     </div>
 
-    <div class="project-intro">
-        <h1>Period Tracking</h1>
-        <p>A period tracking website for better health tracking.</p>
-        <div class="scroll-indicator">
-            <span>Scroll</span>
-            <div class="scroll-arrow"></div>
+    <div class="project-detail">
+        <div class="project-intro">
+            <h1>Period Tracker</h1>
+            <p>A lightweight, user-friendly period tracking web application that enables users to log menstrual cycle data on an interactive calendar, monitor health statistics, and receive optional SMS reminders.</p>
+            <p class="privacy-note">Note: This website is not publicly deployed and is for private use only.</p>
+            <div class="github-link">
+                <a href="https://github.com/bbbjiangggg/PeriodTracker" target="_blank">
+                    <i class="fab fa-github"></i>
+                    View on GitHub
+                </a>
+            </div>
+            <div class="scroll-indicator">
+                <span>Scroll</span>
+                <div class="scroll-arrow"></div>
+            </div>
+        </div>
+
+        <!-- Screenshots Section -->
+        <div class="screenshots-section">
+            <h2>Application Interface</h2>
+            <div class="screenshots-grid">
+                <div class="screenshot-item">
+                    <div class="screenshot-wrapper">
+                        <img src="periodTracking/login.png" alt="Login Page">
+                    </div>
+                    <div class="screenshot-description">
+                        <h3>Secure Login</h3>
+                        <p>Simple and secure authentication system with customizable credentials to protect your personal health data.</p>
+                    </div>
+                </div>
+                <div class="screenshot-item">
+                    <div class="screenshot-wrapper">
+                        <img src="periodTracking/dashboard.png" alt="Dashboard">
+                    </div>
+                    <div class="screenshot-description">
+                        <h3>Statistics Dashboard</h3>
+                        <p>Comprehensive health metrics including average cycle length, predicted ovulation timing, and historical tracking data at a glance.</p>
+                    </div>
+                </div>
+                <div class="screenshot-item">
+                    <div class="screenshot-wrapper">
+                        <img src="periodTracking/calendar.png" alt="Calendar View">
+                    </div>
+                    <div class="screenshot-description">
+                        <h3>Interactive Calendar</h3>
+                        <p>Mark period days, record personal feelings and notes, and visualize your cycle patterns in an intuitive calendar interface.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Features Section -->
+        <div class="features-section">
+            <h2>Key Features</h2>
+            <div class="features-grid">
+                <div class="feature-item">
+                    <h3>Interactive Calendar Interface</h3>
+                    <p>Mark period days and record personal feelings or notes on an easy-to-use calendar view. Track your cycle patterns visually over time.</p>
+                </div>
+                <div class="feature-item">
+                    <h3>Health Statistics</h3>
+                    <p>Monitor average cycle length, predicted ovulation timing, and other key health metrics. View historical data to understand your body better.</p>
+                </div>
+                <div class="feature-item">
+                    <h3>SMS Notifications</h3>
+                    <p>Optional reminder functionality to help you stay on top of your cycle tracking. Never miss important dates with customizable alerts.</p>
+                </div>
+                <div class="feature-item">
+                    <h3>Persistent Data Storage</h3>
+                    <p>All your health records are stored securely in a local database, allowing you to track and analyze your cycle history over time.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tech Stack Section -->
+        <div class="tech-stack">
+            <h2>Technology Stack</h2>
+            <p>Built with Flask (Python web framework), SQLite database, and a clean HTML/CSS/JavaScript frontend.</p>
         </div>
     </div>
 </body>

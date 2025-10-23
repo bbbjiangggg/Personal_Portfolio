@@ -169,6 +169,54 @@
         .version-section.reverse {
             flex-direction: row-reverse;
         }
+        .features-section {
+            margin: 100px auto;
+            max-width: 1200px;
+            padding: 0 40px;
+        }
+        .features-section h2 {
+            font-size: 36px;
+            color: #ff004f;
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px;
+        }
+        .feature-item {
+            padding: 30px;
+            background: #1a1a1a;
+            border-radius: 12px;
+            border: 1px solid #262626;
+        }
+        .feature-item h3 {
+            font-size: 20px;
+            color: #ff004f;
+            margin-bottom: 15px;
+        }
+        .feature-item p {
+            font-size: 14px;
+            color: #ababab;
+            line-height: 1.8;
+        }
+        .tech-stack {
+            margin: 100px auto;
+            max-width: 1200px;
+            padding: 0 40px;
+            text-align: center;
+        }
+        .tech-stack h2 {
+            font-size: 36px;
+            color: #ff004f;
+            margin-bottom: 30px;
+        }
+        .tech-stack p {
+            font-size: 16px;
+            color: #ababab;
+            line-height: 1.8;
+        }
         @media only screen and (max-width: 900px) {
             .project-intro h1 {
                 font-size: 40px;
@@ -186,6 +234,9 @@
             }
             .video-wrapper {
                 height: 450px;
+            }
+            .features-grid {
+                grid-template-columns: 1fr;
             }
         }
     </style>
@@ -294,6 +345,35 @@
                     </iframe>
                 </div>
             </div>
+        </div>
+
+        <!-- Features Section -->
+        <div class="features-section">
+            <h2>Key Features</h2>
+            <div class="features-grid">
+                <div class="feature-item">
+                    <h3>AI-Powered Virtual Try-On</h3>
+                    <p>Leverages advanced AI models including VTON-HD and Gemini Flash 2.5 to generate realistic virtual try-on images, allowing you to visualize outfits before wearing them.</p>
+                </div>
+                <div class="feature-item">
+                    <h3>Smart Style Generation</h3>
+                    <p>Prompt-based outfit creation using AI to suggest and generate fashion combinations. Get intelligent style explanations and fashion insights tailored to your preferences.</p>
+                </div>
+                <div class="feature-item">
+                    <h3>Digital Closet Management</h3>
+                    <p>Organize and manage your wardrobe digitally with photo uploads. Easily browse through your clothing items and experiment with different combinations.</p>
+                </div>
+                <div class="feature-item">
+                    <h3>Multi-Garment Switching</h3>
+                    <p>Seamlessly switch between multiple garments for comprehensive outfit visualization. Mix and match different pieces to create perfect combinations.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tech Stack Section -->
+        <div class="tech-stack">
+            <h2>Technology Stack</h2>
+            <p>Built with Swift using MVVM architecture for iOS. Integrates OpenAI and Gemini Flash 2.5 APIs for AI-powered features. Utilizes computer vision models (CIHP, OpenPose, U2Net, VTON-HD) deployed on cloud infrastructure with GPU acceleration for older versions. Amazon S3 for scalable image storage and custom REST API for seamless client-server communication.</p>
         </div>
     </div>
 </body>
