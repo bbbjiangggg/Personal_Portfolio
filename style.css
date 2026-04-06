@@ -167,6 +167,40 @@ nav ul li a:hover::after{
     margin-left: 5px;
 }
 
+/* -------- publications styling --------  */
+.tab-contents#publications ul li{
+    margin: 16px 0;
+    padding: 0;
+}
+.publication-citation{
+    color: #ababab;
+    font-size: 14px;
+    display: block;
+    line-height: 1.6;
+    text-indent: -2em;
+    padding-left: 2em;
+}
+.publication-citation .pub-white{
+    color: white;
+}
+.publication-citation strong{
+    color: #ff004f;
+    font-weight: 500;
+}
+.publication-citation em{
+    font-style: italic;
+    color: #ababab;
+}
+.publication-citation a{
+    color: #ababab;
+    text-decoration: none;
+    transition: color 0.3s;
+    word-break: break-all;
+}
+.publication-citation a:hover{
+    color: #ff004f;
+}
+
 /* -------- projects --------  */
 #projects{
     padding: 30px 0;
