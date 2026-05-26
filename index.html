@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <!-- <meta http-equiv="X-UA-Compatible" content="IE-edge"> -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Bowen Jiang's personal portfolio featuring biomedical engineering research, AI projects, side projects, hobbies, and contact information.">
     <title>Bowen Jiang Website</title>
     <link rel="icon" type="image/png" href="favicon/home.png">
     <link rel="stylesheet" href="style.css">
@@ -13,7 +13,7 @@
 <div id="header">
     <div class="container">
         <nav>
-            <img src="images/logo.png" class="logo">
+            <img src="images/logo.png" class="logo" alt="Bowen Jiang logo">
             <ul id="sidemenu">
                 <li><a href="#header">Home</a></li>
                 <li><a href="#about">About</a></li>
@@ -36,11 +36,11 @@
     <div class="container">
         <div class="row"> 
             <div class="about-col-1">
-                <img src="images/user.jpeg">
+                <img src="images/user.jpeg" alt="Portrait of Bowen Jiang">
             </div>
             <div class="about-col-2">
                 <h1 class="sub-title">About Me</h1>
-                <p> I am a junior at Duke University studying Biomedical Engineering and Electrical and 
+                <p> I am a rising senior at Duke University studying Biomedical Engineering and Electrical and
                     Computer Engineering. My work spans wet lab research, computational biology, and AI 
                     and machine learning in the life sciences. From engineering iPSC derived cells to 
                     working with protein language models and neural signal decoding, 
@@ -49,72 +49,56 @@
                     create tools that genuinely improve human health and help make the world better. </p>
 
                 <div class="tab-titles">
-                    <p class="tab-links active-link" onclick="opentab('experience')">Experience</p>
-                    <p class="tab-links" onclick="opentab('skills')">Skill</p>
-                    <p class="tab-links" onclick="opentab('education')">Education</p>
-                    <p class="tab-links" onclick="opentab('sideproject')">Side Project</p>
-                    <p class="tab-links" onclick="opentab('publications')">Publications</p>
+                    <p class="tab-links active-link" onclick="opentab('education', this)" tabindex="0" role="button">Education</p>
+                    <p class="tab-links" onclick="opentab('skills', this)" tabindex="0" role="button">Skill</p>
+                    <p class="tab-links" onclick="opentab('publications', this)" tabindex="0" role="button">Publications</p>
                 </div>
-                <div class="tab-contents" id="skills">
-                    <ul>
-                        <li><span>Programming & ML</span><br> Python (Pandas, PyTorch, PyLabRobot), CAD, HTML, C, Machine Learning, R</li>
-                        <li><span>App Development</span><br> SwiftUI, Expo, RESTful API, UI/UX Principles, AWS, Nebius</li>
-                        <li><span>Protein Language Models</span><br>ESM2 fine-tuning, LoRA/PEFT techniques, constraint learning</li>
-                        <li><span>Data Science & Analysis</span><br> scRNA-seq analysis, time series forecasting (Prophet), feature engineering</li>
-                        <li><span>Computational Biology</span><br> ImageJ, Cell Profiler, automation pipelines, Nanopore sequencing</li>
-                        <li><span>Wet Lab Techniques</span><br> iPSC culturing, bacterial transformations, Cell Painting Assay, molecular biology</li>
-                        
-                    </ul>
-                </div>
-                <div class="tab-contents active-tab" id="experience">
-                    <ul>
-                        <li><span>May 2025 - Aug 2025</span><br> <b><a href="https://tetsuwan.com/">Tetsuwan Scientific</a></b>, Intern</li>
-                        <li><span>Sep 2024 - Present</span><br> <b><a href="https://www.coganlab.org/">Cogan Lab</a></b>, Student Researcher</li>
-                        <li><span>Aug 2024 - Present</span><br> <b><a href="https://www.chorylab.com/">Chory Lab</a></b>, Student Researcher</li>
-                        <li><span>Jun 2024 - Aug 2024</span><br> <b><a href="https://www.broadinstitute.org/barrett-lab">Barrett Lab @ Broad Institute</a></b>, Summer Intern</li>
-                        <li><span>Apr 2024 - Present</span><br> <b><a href="https://sites.duke.edu/navid/">Navid NaderiAlizadeh Lab</a></b>, Student Researcher</li>
-                        <li><span>Oct 2023 - May 2025</span><br> <b><a href="https://musahlab.pratt.duke.edu/">Musah Lab</a></b>, Independent Study</li>
-                        <li><span>Jun 2023 - Aug 2023</span><br> <b><a href="https://www.apple.com.cn/">Apple Greater China</a></b>, DMP Intern</li>
-                    </ul>
-                </div>
-                <div class="tab-contents" id="education">
-                    <ul>
-                        <li><span>2023 - 2027</span><br>
-                            <b><a href="https://pratt.duke.edu/">DUKE UNIVERSITY</a></b> <br>
-                            <ul class="nested-list">
-                                <li><u>Selected Courses</u></li>
-                                    Linear Algebra & Application, Data Structures & Algorithms,
-                                    Microelectronic Devices and Circuits, Quantitative Physiology and Biostatistical Applications,
-                                    Deep Neural Networks, PDE & ODE, Signals & Systems, Connectomic Neuralmodulation
-                                <li><u>Leadership & Extracurriculars</u></li>
-                                Duke Chinese Student Association, Co-President <br>
-                                <!-- Duke BioByte, Head of Tech & Member of the Bio+AI Team -->
-                            </ul>
-                        </li>
-                        <li><span>2019 - 2023</span><br>
-                            <b><a href="https://www.wra.net/">WESTERN RESERVE ACADEMY</a></b><br>
-                            <ul class="nested-list">
-                                    <li>Diploma Honors in Social Science, Science, Modern & Classical Languages, and Mathematics</li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-                <div class="tab-contents" id="sideproject">
-                    <ul>
-                        <li><span class="project-title-link"><a href="tryit.html">TryIt <i class="fa-solid fa-arrow-up-right-from-square"></i></a></span><br>A virtual try on app that allows a prompt-based, gamified, modular, and social virtual try on experience to explore endless personal fashion possibilities.</li>
-                        <li><span class="project-title-link"><a href="calendarocr.html">CalendarOCR <i class="fa-solid fa-arrow-up-right-from-square"></i></a></span><br>An app that translates poster events from phone camera to calendar event and can be saved on device calendar. Ideal for college events.</li>
-                        <li><span class="project-title-link"><a href="periodtracking.html">Period Tracking Website <i class="fa-solid fa-arrow-up-right-from-square"></i></a></span><br>A period tracking website for better health tracking.</li>
-                    </ul>
-                </div>
-                <div class="tab-contents" id="publications">
-                    <ul>
-                        <li>
-                            <span class="publication-citation"><span class="pub-white">Barreto, A. D., <strong>Jiang, B.</strong>, Burt, M. A., Dimitrakakis, N., & Musah, S. (2026, April 2). Discovery of kidney disease targets using multimodal human podocyte injury models.</span> <em>Stem Cell Reports</em>. <a href="https://doi.org/10.1016/j.stemcr.2026.102868" target="_blank">https://doi.org/10.1016/j.stemcr.2026.102868</a></span>
-                        </li>
-                        <li>
-                            <span class="publication-citation"><span class="pub-white">Boileau, R. M., Golas, S. M., Ma, Q., <strong>Jiang, B.</strong>, Aradhana, Jia, M., Ilieva, N., Baydush, A., Fu, H., & Chory, E. J. (2026, March 6). An autonomous system for multi-objective continuous evolution at scale.</span> <em>bioRxiv</em>. <a href="https://doi.org/10.64898/2026.03.02.709196" target="_blank">https://doi.org/10.64898/2026.03.02.709196</a></span>
-                        </li>
-                    </ul>
+                <div class="tab-content-area">
+                    <div class="tab-contents" id="skills">
+                        <ul>
+                            <li><span>Programming & ML</span><br> Python (Pandas, PyTorch, PyLabRobot), CAD, HTML, C, Machine Learning, R</li>
+                            <li><span>App Development</span><br> SwiftUI, Expo, RESTful API, UI/UX Principles, AWS, Nebius</li>
+                            <li><span>Protein Language Models</span><br>ESM2 fine-tuning, LoRA/PEFT techniques, constraint learning</li>
+                            <li><span>Data Science & Analysis</span><br> scRNA-seq analysis, time series forecasting (Prophet), feature engineering</li>
+                            <li><span>Computational Biology</span><br> ImageJ, Cell Profiler, automation pipelines, Nanopore sequencing</li>
+                            <li><span>Wet Lab Techniques</span><br> iPSC culturing, bacterial transformations, Cell Painting Assay, molecular biology</li>
+
+                        </ul>
+                    </div>
+                    <div class="tab-contents active-tab" id="education">
+                        <ul>
+                            <li><span>2023 - 2027</span><br>
+                                <b><a href="https://pratt.duke.edu/">DUKE UNIVERSITY</a></b> <br>
+                                <ul class="nested-list">
+                                    <li><u>Selected Courses</u><br>
+                                        Linear Algebra &amp; Application, Data Structures &amp; Algorithms,
+                                        Microelectronic Devices and Circuits, Quantitative Physiology and Biostatistical Applications,
+                                        Deep Neural Networks, PDE & ODE, Signals & Systems, Connectomic Neuralmodulation
+                                    </li>
+                                    <li><u>Leadership &amp; Extracurriculars</u><br>
+                                    Duke Chinese Student Association, Co-President
+                                    </li>
+                                    <!-- Duke BioByte, Head of Tech & Member of the Bio+AI Team -->
+                                </ul>
+                            </li>
+                            <li><span>2019 - 2023</span><br>
+                                <b><a href="https://www.wra.net/">WESTERN RESERVE ACADEMY</a></b><br>
+                                <ul class="nested-list">
+                                        <li>Diploma Honors in Social Science, Science, Modern & Classical Languages, and Mathematics</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="publications">
+                        <ul>
+                            <li>
+                                <span class="publication-citation"><span class="pub-white">Barreto, A. D., <strong>Jiang, B.</strong>, Burt, M. A., Dimitrakakis, N., &amp; Musah, S. (2026, April 2). Discovery of kidney disease targets using multimodal human podocyte injury models.</span> <em>Stem Cell Reports</em>. <a href="https://doi.org/10.1016/j.stemcr.2026.102868" target="_blank" rel="noopener noreferrer">https://doi.org/10.1016/j.stemcr.2026.102868</a></span>
+                            </li>
+                            <li>
+                                <span class="publication-citation"><span class="pub-white">Boileau, R. M., Golas, S. M., Ma, Q., <strong>Jiang, B.</strong>, Aradhana, Jia, M., Ilieva, N., Baydush, A., Fu, H., &amp; Chory, E. J. (2026, March 6). An autonomous system for multi-objective continuous evolution at scale.</span> <em>bioRxiv</em>. <a href="https://doi.org/10.64898/2026.03.02.709196" target="_blank" rel="noopener noreferrer">https://doi.org/10.64898/2026.03.02.709196</a></span>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
@@ -124,63 +108,124 @@
 <!-- -------- Projects -------- -->
 <div id="projects">
     <div class="container">
-        <h1 class="sub-title">Selected Experiences</h1>
-        <div class="project-list">
-            <div>
-                <i class="fa-solid fa-robot"></i>
-                <h2>Tetsuwan Scientific</h2>
-                <img src="images/tetsuwan.PNG">
-                <p>Helped building AI-scientist to automate life science research in an 8-person startup team. 
-                    I automated the bacterial trasnformation protocol, Nanopore sequencing pipeline, and colony picking through integrating 3D printed custom tools with liquid handler robots and developing computer vision 
-                    approaches. I also contributed to the first lab automation community wikipedia page. </p>
-                <a href="https://www.linkedin.com/feed/update/urn:li:activity:7368795719849123840/">Lab Auto Wiki</a>
-                <!-- <a href="#">See the Paper</a> -->
-            </div>
-            <div>
-                <i class="fa-solid fa-dna"></i>
-                <h2>Chory Lab</h2>
-                <img src="images/chory.png">
-                <p>Applying robotics-aided directed evolution to study and engineer chromatin binding proteins.
-                    I worked on bacterial transformations, contributed to PyLabRobot (PLR),
-                    and automated plenty assays on robot, advancing the field of automated protein engineering and synthetic biology.<br><br>
-                    <a href="https://doi.org/10.64898/2026.03.02.709196" target="_blank">bioRxiv Publication</a></p>
-            </div>
-            <div>
-                <i class="fa-solid fa-brain"></i>
-                <h2>Barrett Lab</h2>
-                <img src="images/barret_lab.png">
-                <p> I worked at the Barrett lab throughout the summer at Broad and Harvard through the Harvard Stem Cell Institute Internship. I utilized iPSC-derived neural progenitor cells to study Down Syndrome-specific morphology, 
-                    conducted Cell Painting Assay, and applied machine learning to extract key traits related to DS, reaching 83% prediction accuracy.</p>
-                <a href="https://uraf.harvard.edu/sites/projects.iq.harvard.edu/files/uraf/files/2024_hsurv_abstract_book_final.pdf">HSURV Abstract Book pg. 44</a>
-            </div>
-            <div>
-                <i class="fa-solid fa-code"></i>
-                <h2>Navid Lab</h2>
-                <img src="images/pll.jpg">
-                <p>I formulated a primal-dual constraint learning problem to tackle protein pathogenicity prediction. To 
-                    achieve the desired outcome, I fine-tuned ESM2 models with PEFT LoRA and constraint relaxation to improve results by 5%. 
-                    We are currently preparing the manuscript for submission.</p>
-                <!-- <a href="#">See the Paper</a> -->
-            </div>
-            <div>
-                <i class="fa-solid fa-vial"></i>
-                <h2>Musah Lab</h2>
-                <img src="images/musah_lab.png">
-                <p>My lab implements an innovative way to engineer functional podocyte cells using human iPSCs. Using them as models to study Chronic Kidney Disease (CKD),
-                    I identified 6 important genetic pathways related to podocyte injury from scRNA-seq data that may serve as treatment targets for CKD.<br><br>
-                    <a href="https://doi.org/10.1016/j.stemcr.2026.102868" target="_blank">Stem Cell Reports Publication</a></p>
-            </div>
-            <div>
-                <i class="fa-brands fa-apple"></i>
-                <h2>Apple</h2>
-                <img src="images/apple.jpg">
-                <p> Working with the data team at Apple Greater China, I constructed a Prophet-based ML model to predict 15-week Mac sales, improving MAPE by 56%.
-                    I performed feature engineering with Pandas and tested Lightgbm model to predict weekly iPhone sales. 
-                    Successfully incorporated the final Prophet model into the data team's prediction workflow.</p>
-                <!-- <a href="#">Learn More</a> -->
+        <div class="experience-group">
+            <h2>Research</h2>
+            <div class="experience-carousel" data-carousel>
+                <button class="carousel-btn carousel-btn-left" type="button" aria-label="Previous research experience"><i class="fa-solid fa-chevron-left"></i></button>
+                <div class="carousel-viewport">
+                    <div class="experience-track">
+                        <article class="experience-card">
+                            <i class="fa-solid fa-wave-square"></i>
+                            <h3>Cogan Lab</h3>
+                            <img src="images/cogan.png" alt="Cogan Lab sEEG speech perception analysis" loading="lazy">
+                            <p>Developed end-to-end MNE-Python pipelines for intracranial sEEG analysis, from Audacity response annotation and high-gamma extraction to permutation-based electrode visualization for speech perception decoding. Analyzed 26 patient datasets to identify phoneme-dependent uniqueness points and characterize inter-subject variability in high-gamma neural representations.</p>
+                        </article>
+                        <article class="experience-card">
+                            <i class="fa-solid fa-dna"></i>
+                            <h3>Chory Lab</h3>
+                            <img src="images/chory.png" alt="Chory Lab research image" loading="lazy">
+                            <p>Engineered automated T7 phage-directed evolution workflows on Hamilton liquid handlers for 72-hour autonomous operation. Reduced PCR and Qubit reaction cost by over 50% on the Opentrons OT-2, contributed PyLabRobot visualizer modules, and documented automation protocols for future use.</p>
+                            <a href="https://doi.org/10.64898/2026.03.02.709196" target="_blank" rel="noopener noreferrer">bioRxiv Publication</a>
+                        </article>
+                        <article class="experience-card">
+                            <i class="fa-solid fa-brain"></i>
+                            <h3>Barrett Lab</h3>
+                            <img src="images/barret_lab.png" alt="Barrett Lab research image" loading="lazy">
+                            <p>Conducted Cell Painting Assay on induced iPSC-derived neurons and progenitor cells to study Down Syndrome morphology. Built an XGBoost pipeline to rank discriminative imaging features, achieving 83% accuracy in classifying Down Syndrome versus control cells.</p>
+                            <a href="https://uraf.harvard.edu/sites/projects.iq.harvard.edu/files/uraf/files/2024_hsurv_abstract_book_final.pdf">HSURV Abstract Book pg. 44</a>
+                        </article>
+                        <article class="experience-card">
+                            <i class="fa-solid fa-vial"></i>
+                            <h3>Musah Lab</h3>
+                            <img src="images/musah_lab.png" alt="Musah Lab podocyte research image" loading="lazy">
+                            <p>Analyzed RNA-seq data from iPSC-derived podocytes under injury conditions to identify potential therapeutic targets for chronic kidney disease. Gained hands-on experience with stem cell culture, injury treatment, and organ-on-chip technology; second-author manuscript under review at Stem Cell Reports.</p>
+                            <a href="https://doi.org/10.1016/j.stemcr.2026.102868" target="_blank" rel="noopener noreferrer">Stem Cell Reports Publication</a>
+                        </article>
+                        <article class="experience-card">
+                            <i class="fa-solid fa-code"></i>
+                            <h3>Navid Lab</h3>
+                            <img src="images/pll.jpg" alt="Protein language model project visual" loading="lazy">
+                            <p>Designed a primal-dual constraint learning framework for protein pathogenicity and fitness score prediction on ProteinNPT data. Fine-tuned ESM2 8M with LoRA on about 700k variants, improved Spearman correlation by 2% over baselines, and built a scalable 5-fold PyTorch validation pipeline.</p>
+                        </article>
+                    </div>
+                </div>
+                <button class="carousel-btn carousel-btn-right" type="button" aria-label="Next research experience"><i class="fa-solid fa-chevron-right"></i></button>
             </div>
         </div>
-        <!-- <a href="#" class="btn">See More</a> -->
+
+        <div class="experience-group">
+            <h2>Industry</h2>
+            <div class="experience-carousel" data-carousel>
+                <button class="carousel-btn carousel-btn-left" type="button" aria-label="Previous industry experience"><i class="fa-solid fa-chevron-left"></i></button>
+                <div class="carousel-viewport">
+                    <div class="experience-track">
+                        <article class="experience-card">
+                            <img src="Science/science-wordmark.svg" class="company-title-logo" alt="Science Corp logo" loading="lazy">
+                            <img src="Science/biohybrid.webp" alt="Science Corp biohybrid BCI system" loading="lazy">
+                            <p>Incoming Protein Engineering Intern on the biohybrid BCI team. I will work on automating and improving the throughput of rhodopsin discovery assays for next-generation neural interface systems.</p>
+                        </article>
+                        <article class="experience-card">
+                            <img src="amazon/amazonlogo.png" class="company-title-logo" alt="Amazon logo" loading="lazy">
+                            <img src="amazon/device.jpg" alt="Amazon Devices team product image" loading="lazy">
+                            <p>Incoming SDE Intern on the Devices team. I will work on bridging Alexa capabilities with Fire TV to create more seamless voice-driven entertainment experiences.</p>
+                        </article>
+                        <article class="experience-card">
+                            <img src="brainCo/bclogo.png" class="company-title-logo" alt="BrainCo logo" loading="lazy">
+                            <img src="brainCo/glass.webp" alt="BrainCo smart glasses image" loading="lazy">
+                            <p>Built a calorie detection app by integrating smart glasses image capture, cloud-based calorie estimation, and frontend UI. Tested computer vision models including YOLOv8, SAM, and Depth Anything, and worked with vendors on camera requirements, cost, and hardware constraints.</p>
+                        </article>
+                        <article class="experience-card">
+                            <img src="tetsuwan/tetlogo.png" class="company-title-logo" alt="Tetsuwan Scientific logo" loading="lazy">
+                            <img src="images/tetsuwan.PNG" alt="Tetsuwan Scientific lab automation work" loading="lazy">
+                            <p>Helped build AI-scientist systems to automate life science research, including bacterial transformation, Nanopore sequencing, colony picking, and custom lab automation tools.</p>
+                            <a href="https://www.linkedin.com/feed/update/urn:li:activity:7368795719849123840/">Lab Auto Wiki</a>
+                        </article>
+                        <article class="experience-card">
+                            <i class="fa-brands fa-apple"></i>
+                            <img src="images/apple.jpg" alt="Apple Greater China internship image" loading="lazy">
+                            <p>Built Prophet-based forecasting for 15-week Mac sales, improved MAPE by 56%, and incorporated the final model into the data team's prediction workflow.</p>
+                        </article>
+                    </div>
+                </div>
+                <button class="carousel-btn carousel-btn-right" type="button" aria-label="Next industry experience"><i class="fa-solid fa-chevron-right"></i></button>
+            </div>
+        </div>
+
+        <div class="experience-group">
+            <h2>Projects</h2>
+            <div class="experience-carousel" data-carousel>
+                <button class="carousel-btn carousel-btn-left" type="button" aria-label="Previous project"><i class="fa-solid fa-chevron-left"></i></button>
+                <div class="carousel-viewport">
+                    <div class="experience-track">
+                        <article class="experience-card project-card">
+                            <a class="project-logo-link" href="https://wind-landing.vercel.app/" target="_blank" rel="noopener noreferrer" aria-label="Open Wind project page">
+                                <img src="wind/wind.png" alt="Wind project logo" loading="lazy">
+                            </a>
+                            <p>Wind - AI wallet for the next generation of consumer AI applications.</p>
+                        </article>
+                        <article class="experience-card project-card">
+                            <a class="project-logo-link" href="tryit.html" aria-label="Open TryIt project page">
+                                <img src="tryit/tryit.png" alt="TryIt app logo" loading="lazy">
+                            </a>
+                            <p>TryIt - prompt-based virtual try-on for fashion exploration.</p>
+                        </article>
+                        <article class="experience-card project-card">
+                            <a class="project-logo-link" href="calendarocr.html" aria-label="Open CalendarOCR project page">
+                                <img src="calendarOCR/icon.png" alt="CalendarOCR app logo" loading="lazy">
+                            </a>
+                            <p>CalendarOCR - poster-to-calendar event capture from camera.</p>
+                        </article>
+                        <article class="experience-card project-card">
+                            <a class="project-logo-link" href="periodtracking.html" aria-label="Open Period Detector project page">
+                                <img src="periodTracking/logo.png" alt="Period Detector project logo" loading="lazy">
+                            </a>
+                            <p>Period Detector - private cycle tracking and health statistics.</p>
+                        </article>
+                    </div>
+                </div>
+                <button class="carousel-btn carousel-btn-right" type="button" aria-label="Next project"><i class="fa-solid fa-chevron-right"></i></button>
+            </div>
+        </div>
     </div>
 </div>
 
@@ -190,7 +235,7 @@
         <h1 class="sub-title">My Hobbies</h1>
         <div class="work-list">
             <div class="work">
-                <img src="images/sport.png">
+                <img src="images/sport.png" alt="Sports hobby image" loading="lazy">
                 <div class="layer">
                     <h3>Sports</h3>
                     <p>I am a big fan of all sports. Check out some of my sports videos here!</p>
@@ -198,7 +243,7 @@
                 </div>
             </div>
             <div class="work">
-                <img src="images/art.png">
+                <img src="images/art.png" alt="Piano and art hobby image" loading="lazy">
                 <div class="layer">
                     <h3>Piano & Art</h3>
                     <p>Creativity takes courage. Check out some of my paintings in this archive I built for my high school!</p>
@@ -206,7 +251,7 @@
                 </div>
             </div>
             <div class="work">
-                <img src="images/travel.png">
+                <img src="images/travel.png" alt="Traveling hobby image" loading="lazy">
                 <div class="layer">
                     <h3>Traveling</h3>
                     <p>Life is a daring adventure. Check out my latest travel video in Xinjiang!</p>
@@ -226,10 +271,10 @@
                 <p><i class="fa-regular fa-paper-plane"></i> bj142@duke.edu</p>
                 <p><i class="fa-solid fa-phone"></i> 330-734-7051</p>
                 <div class="social-icons">
-                    <a href="https://www.linkedin.com/in/bowen-jiang-3229a1257?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"><i class="fa-brands fa-linkedin"></i></a>
-                    <a href="https://www.instagram.com/bowenjiang26?igsh=MTZjZjFzNGk5dzNpNQ%3D%3D&utm_source=qr"><i class="fa-brands fa-square-instagram"></i></a>
-                    <a href="https://x.com/bowen67888758?s=21&t=4vuplVysKJ8gOeiuINLu3A"><i class="fa-brands fa-x-twitter"></i></a>
-                    <a href="https://www.facebook.com/share/KNh178pu6eNBMzbc/?mibextid=LQQJ4d"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://www.linkedin.com/in/bowen-jiang-3229a1257?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" aria-label="LinkedIn profile"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://www.instagram.com/bowenjiang26?igsh=MTZjZjFzNGk5dzNpNQ%3D%3D&utm_source=qr" aria-label="Instagram profile"><i class="fa-brands fa-square-instagram"></i></a>
+                    <a href="https://x.com/bowen67888758?s=21&t=4vuplVysKJ8gOeiuINLu3A" aria-label="X profile"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="https://www.facebook.com/share/KNh178pu6eNBMzbc/?mibextid=LQQJ4d" aria-label="Facebook profile"><i class="fa-brands fa-facebook"></i></a>
                 </div>
                 <a href="images/BowenJiang-CV.pdf" download class="btn btn2">Download CV</a>
             </div>
@@ -238,7 +283,7 @@
                     <input type="text" name="Name" placeholder="Your Name" required>
                     <input type="email" name="Email" placeholder="Your Email" required>
                     <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
-                    <button type="Submit" class="btn btn2">Submit</button>
+                    <button type="submit" class="btn btn2">Submit</button>
                 </form>
                 <span id="msg"></span>
             </div>
@@ -252,46 +297,32 @@
 
 <script>
 
-    var tablinks = document.getElementsByClassName("tab-links");
-    var tabcontents = document.getElementsByClassName("tab-contents");
+    const tablinks = document.getElementsByClassName("tab-links");
+    const tabcontents = document.getElementsByClassName("tab-contents");
 
-    function opentab(tabname){
-        for(tablink of tablinks){
+    function opentab(tabname, activeTab){
+        for(const tablink of tablinks){
             tablink.classList.remove("active-link")
         }
-        for(tabcontent of tabcontents){
+        for(const tabcontent of tabcontents){
             tabcontent.classList.remove("active-tab")
         }
-        event.currentTarget.classList.add("active-link");
+        activeTab.classList.add("active-link");
         document.getElementById(tabname).classList.add("active-tab")
     }
 
-    // Check if returning from a project page and auto-open Side Project tab
+    for (const tablink of tablinks) {
+        tablink.addEventListener("keydown", function(e) {
+            if (e.key === "Enter" || e.key === " ") {
+                e.preventDefault();
+                tablink.click();
+            }
+        });
+    }
+
+    // Check if returning from a project page and jump to About
     window.addEventListener('DOMContentLoaded', function() {
         if (window.location.hash === '#about-sideproject') {
-            // Remove active classes from all tabs
-            for(let tablink of tablinks){
-                tablink.classList.remove("active-link")
-            }
-            for(let tabcontent of tabcontents){
-                tabcontent.classList.remove("active-tab")
-            }
-
-            // Find and activate the Side Project tab
-            var sideProjectTab = Array.from(tablinks).find(tab =>
-                tab.getAttribute('onclick') === "opentab('sideproject')"
-            );
-            if (sideProjectTab) {
-                sideProjectTab.classList.add("active-link");
-            }
-
-            // Show the Side Project content
-            var sideProjectContent = document.getElementById('sideproject');
-            if (sideProjectContent) {
-                sideProjectContent.classList.add("active-tab");
-            }
-
-            // Jump directly to the about section
             document.getElementById('about').scrollIntoView();
         }
     });
@@ -300,7 +331,7 @@
 
 <script>
 
-    var sidemenu = document.getElementById("sidemenu");
+    const sidemenu = document.getElementById("sidemenu");
 
     function openmenu(){
         sidemenu.style.right = "0";
@@ -309,6 +340,51 @@
         sidemenu.style.right = "-200px";
     }
 
+</script>
+
+<script>
+    const carousels = document.querySelectorAll("[data-carousel]");
+
+    function getVisibleCards(){
+        return window.innerWidth <= 900 ? 1 : 3;
+    }
+
+    function updateCarousel(carousel){
+        const track = carousel.querySelector(".experience-track");
+        const cards = track.querySelectorAll(".experience-card");
+        const prevButton = carousel.querySelector(".carousel-btn-left");
+        const nextButton = carousel.querySelector(".carousel-btn-right");
+        const visibleCards = getVisibleCards();
+        const maxIndex = Math.max(cards.length - visibleCards, 0);
+        const currentIndex = Math.min(Number(carousel.dataset.index || 0), maxIndex);
+        const gap = parseFloat(getComputedStyle(track).gap) || 0;
+        const cardWidth = cards[0] ? cards[0].getBoundingClientRect().width : 0;
+
+        carousel.dataset.index = currentIndex;
+        track.style.transform = `translateX(-${currentIndex * (cardWidth + gap)}px)`;
+        prevButton.disabled = currentIndex === 0;
+        nextButton.disabled = currentIndex === maxIndex;
+    }
+
+    carousels.forEach(function(carousel){
+        const prevButton = carousel.querySelector(".carousel-btn-left");
+        const nextButton = carousel.querySelector(".carousel-btn-right");
+
+        carousel.dataset.index = 0;
+        prevButton.addEventListener("click", function(){
+            carousel.dataset.index = Math.max(Number(carousel.dataset.index) - 1, 0);
+            updateCarousel(carousel);
+        });
+        nextButton.addEventListener("click", function(){
+            carousel.dataset.index = Number(carousel.dataset.index) + 1;
+            updateCarousel(carousel);
+        });
+        updateCarousel(carousel);
+    });
+
+    window.addEventListener("resize", function(){
+        carousels.forEach(updateCarousel);
+    });
 </script>
 
 <script>

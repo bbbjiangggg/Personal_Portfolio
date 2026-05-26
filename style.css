@@ -64,6 +64,19 @@ nav ul li a::after{
 nav ul li a:hover::after{
     width: 100%;
 }
+nav ul li a:focus-visible,
+.tab-links:focus-visible,
+.experience-card:focus-visible,
+.experience-card a:focus-visible,
+.carousel-btn:focus-visible,
+.layer a:focus-visible,
+.social-icons a:focus-visible,
+.btn:focus-visible,
+form input:focus-visible,
+form textarea:focus-visible{
+    outline: 2px solid #ff004f;
+    outline-offset: 4px;
+}
 
 .header-text{
     margin-top: 20%;
@@ -108,6 +121,8 @@ nav ul li a:hover::after{
 
 .tab-titles{
     display:flex;
+    flex-wrap: wrap;
+    gap: 12px 0;
     margin-top: 20px;
     margin-bottom: 25px;
 }
@@ -133,6 +148,9 @@ nav ul li a:hover::after{
     width: 50%;
 }
 
+.tab-content-area{
+    min-height: 280px;
+}
 .tab-contents ul li{
     list-style: none;
     margin: 10px 0;
@@ -203,68 +221,202 @@ nav ul li a:hover::after{
 
 /* -------- projects --------  */
 #projects{
-    padding: 30px 0;
+    padding: 60px 0 30px;
 }
-.project-list{
+.experience-group{
+    margin-top: 80px;
+}
+.experience-group:first-child{
+    margin-top: 0;
+}
+.experience-group h2{
+    color: white;
+    font-size: 52px;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+.experience-carousel{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    grid-gap: 40px;
-    margin-top: 50px;
+    grid-template-columns: 52px 1fr 52px;
+    align-items: center;
+    gap: 18px;
 }
-.project-list div{
+.carousel-viewport{
+    overflow: hidden;
+    padding: 14px 10px;
+    margin: -14px -10px;
+}
+.experience-track{
+    display: flex;
+    gap: 40px;
+    transition: transform 0.45s ease;
+}
+.experience-card{
+    flex: 0 0 calc((100% - 80px) / 3);
     background: #262626;
     padding: 20px;
     font-size: 13px;
     font-weight: 300;
     border-radius: 10px;
     transition: background 0.5s, transform 0.5s;
+    transform-origin: center;
     display: flex;                 
     flex-direction: column;         
     align-items: flex-start;       
-    justify-content: flex-start; 
+    justify-content: flex-start;
+    min-height: 430px;
+    color: white;
+    text-decoration: none;
 }
-.project-list div i{
+.experience-card > i{
     font-size: 50px;
     margin-bottom: 30px;
 }
-.project-list div h2{
+.experience-card .company-title-logo{
+    width: 150px;
+    max-width: 70%;
+    height: 50px;
+    object-fit: contain;
+    margin: 0 0 30px;
+    border-radius: 0;
+    background: transparent;
+}
+.experience-card h3{
     font-size: 30px;
     font-weight: 500;
     margin-bottom: 15px;
 }
-.project-list div a{
-    text-decoration: none;
+.experience-card a,
+.experience-card span{
+    text-decoration: underline;
+    text-underline-offset: 4px;
     color: white;
     font-size: 12px;
-    margin-top: 20px;
+    margin-top: auto;
     display: inline-block;
 }
-.project-list div p{
+.experience-card p{
     line-height: 1.2;
 }
-.project-list div:hover{
+.experience-card:hover{
     background: #ff004f;
-    transform: translateY(-10px);
+    transform: scale(1.03);
 }
-.project-list img{
-    width: 100%;
+.experience-card img,
+.experience-logo-placeholder{
     border-radius: 10px;
     display: block;
     margin: 20px auto;
-    /* transition: transform 0.5s; */
     width: 100%;            
     max-width: 300px;      
     height: 200px;          
     object-fit: cover; 
-    /* object-fit: contain;    
-    background-color: #262626; 
-    border-radius: 10px;
-    display: block;
-    margin: 20px auto; */
 }
-/* .project-list img:hover{
-    transform: scale(1.05);
-} */
+.experience-logo-placeholder{
+    background: #1a1a1a;
+    color: #ff004f;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.experience-logo-placeholder i{
+    font-size: 64px;
+}
+.project-card{
+    background: transparent;
+    min-height: 260px;
+    padding: 10px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    cursor: default;
+}
+.project-card:hover{
+    background: transparent;
+    transform: none;
+}
+.experience-card .project-logo-link{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 190px;
+    margin: 0 auto 18px;
+    text-decoration: none;
+}
+.project-logo-static{
+    pointer-events: none;
+}
+.project-card img{
+    align-self: center;
+    width: auto;
+    max-width: 220px;
+    height: 180px;
+    border-radius: 32px;
+    object-fit: contain;
+    background: transparent;
+    padding: 0;
+    filter: drop-shadow(0 12px 24px rgba(0, 0, 0, 0.28));
+    mix-blend-mode: screen;
+    opacity: 0.92;
+    transition: opacity 0.4s, filter 0.4s, transform 0.4s;
+}
+.project-logo-link:hover img,
+.project-logo-link:focus-visible img{
+    filter: drop-shadow(0 14px 30px rgba(0, 0, 0, 0.35));
+    opacity: 1;
+    transform: scale(1.07);
+}
+.project-card p{
+    max-width: 260px;
+    color: #d4d4d4;
+    font-size: 14px;
+    line-height: 1.5;
+}
+.carousel-btn{
+    width: 52px;
+    height: 52px;
+    border: 1px solid #ff004f;
+    border-radius: 50%;
+    background: transparent;
+    color: #ff004f;
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s, opacity 0.3s;
+}
+.carousel-btn:hover{
+    background: #ff004f;
+    color: white;
+}
+.carousel-btn:disabled{
+    opacity: 0.35;
+    cursor: default;
+}
+.carousel-btn:disabled:hover{
+    background: transparent;
+    color: #ff004f;
+}
+@media only screen and (max-width: 900px){
+    .experience-carousel{
+        grid-template-columns: 44px 1fr 44px;
+        gap: 12px;
+    }
+    .experience-track{
+        gap: 20px;
+    }
+    .experience-card{
+        flex-basis: 100%;
+        min-height: 400px;
+    }
+    .project-card{
+        min-height: 260px;
+    }
+    .carousel-btn{
+        width: 44px;
+        height: 44px;
+    }
+    .experience-group h2{
+        font-size: 40px;
+    }
+}
 /* -------- portfolio --------  */
 #portfolio{
     padding: 50px 0;
@@ -282,7 +434,6 @@ nav ul li a:hover::after{
     overflow: hidden;
 }
 .work img{
-    width: 100%;
     border-radius: 10px;
     display: block;
     transition: transform 0.5s;
@@ -420,8 +571,12 @@ nav .fa-solid{
 }
 
 @media only screen and (max-width: 600px){
+    .container{
+        padding: 10px 6%;
+    }
     #header{
         background-image: url(images/phone-background.JPG);
+        background-attachment: scroll;
     }
     .header-text{
         margin-top: 100%;
@@ -471,6 +626,91 @@ nav .fa-solid{
     .tab-links{
         font-size: 16px;
         margin-right: 20px;
+    }
+    .tab-content-area{
+        min-height: 430px;
+    }
+    .publication-citation{
+        font-size: 13px;
+        text-indent: 0;
+        padding-left: 0;
+    }
+
+    #projects{
+        padding: 45px 0 20px;
+    }
+    .experience-group{
+        margin-top: 60px;
+    }
+    .experience-group h2{
+        font-size: 38px;
+        margin-bottom: 24px;
+    }
+    .experience-carousel{
+        grid-template-columns: 36px minmax(0, 1fr) 36px;
+        gap: 8px;
+    }
+    .carousel-viewport{
+        padding: 12px 8px;
+        margin: -12px -8px;
+    }
+    .experience-track{
+        gap: 16px;
+    }
+    .experience-card{
+        min-height: 460px;
+        padding: 16px;
+        font-size: 12px;
+    }
+    .experience-card > i{
+        font-size: 42px;
+        margin-bottom: 22px;
+    }
+    .experience-card .company-title-logo{
+        width: 130px;
+        height: 44px;
+        margin-bottom: 22px;
+    }
+    .experience-card h3{
+        font-size: 24px;
+    }
+    .experience-card p{
+        line-height: 1.35;
+    }
+    .experience-card img,
+    .experience-logo-placeholder{
+        height: 165px;
+        max-width: 100%;
+        margin: 16px auto;
+    }
+    .project-card{
+        min-height: 240px;
+        padding: 8px;
+    }
+    .experience-card .project-logo-link{
+        min-height: 160px;
+        margin-bottom: 12px;
+    }
+    .project-card img{
+        max-width: 170px;
+        height: 145px;
+        border-radius: 26px;
+    }
+    .project-card p{
+        max-width: 220px;
+        font-size: 13px;
+    }
+    .carousel-btn{
+        width: 36px;
+        height: 36px;
+        font-size: 12px;
+    }
+    .work img{
+        max-width: none;
+    }
+    .layer{
+        padding: 0 24px;
+        font-size: 13px;
     }
 
     .contact-left, .contact-right{
