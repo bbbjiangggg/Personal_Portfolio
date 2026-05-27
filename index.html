@@ -337,8 +337,12 @@
         sidemenu.style.right = "0";
     }
     function closemenu(){
-        sidemenu.style.right = "-200px";
+        sidemenu.style.right = "-180px";
     }
+
+    sidemenu.querySelectorAll("a").forEach(function(link){
+        link.addEventListener("click", closemenu);
+    });
 
 </script>
 

@@ -585,6 +585,16 @@ nav .fa-solid{
     .header-text h1{
         font-size: 30px;
     }
+    nav{
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 10;
+        padding: 10px 6%;
+        background: rgba(8, 8, 8, 0.82);
+        backdrop-filter: blur(10px);
+    }
     nav .fa-solid{
         display: block;
         font-size: 25px;
@@ -593,11 +603,11 @@ nav .fa-solid{
         background: #ff004f;
         position: fixed;
         top: 0;
-        right: -200px;
-        width: 200px;
+        right: -180px;
+        width: 180px;
         height: 100vh;
         padding-top: 50px;
-        z-index: 2;
+        z-index: 20;
         transition: right 0.5s;
     }
     nav ul li{
@@ -609,6 +619,12 @@ nav .fa-solid{
         top: 25px;
         left: 25px;
         cursor: pointer;
+    }
+    #about,
+    #projects,
+    #portfolio,
+    #contact{
+        scroll-margin-top: 72px;
     }
 
     .sub-title{
