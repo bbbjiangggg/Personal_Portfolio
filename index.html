@@ -40,13 +40,14 @@
             </div>
             <div class="about-col-2">
                 <h1 class="sub-title">About Me</h1>
-                <p> I am a rising senior at Duke University studying Biomedical Engineering and Electrical and
-                    Computer Engineering. My work spans wet lab research, computational biology, and AI 
-                    and machine learning in the life sciences. From engineering iPSC derived cells to 
-                    working with protein language models and neural signal decoding, 
-                    I enjoy turning biological insight into real technologies. 
-                    I care deeply about building products that matter and hope to eventually 
-                    create tools that genuinely improve human health and help make the world better. </p>
+                <p>I'm a senior at Duke University studying Biomedical Engineering and Electrical and
+                    Computer Engineering. My experience spans wet lab research, computational biology, AI,
+                    and software engineering, from engineering iPSC-derived cells to working with protein
+                    language models and neural signal decoding.</p>
+                <p>Beyond research, I enjoy building and shipping products that solve real problems. I'm
+                    currently exploring the intersection of AI, consumer software, and payments through a
+                    startup I'm co-founding. I'm driven by curiosity, entrepreneurship, and the opportunity
+                    to turn ambitious ideas into technologies that make a meaningful impact.</p>
 
                 <div class="tab-titles">
                     <p class="tab-links active-link" onclick="opentab('education', this)" tabindex="0" role="button">Education</p>
@@ -109,6 +110,44 @@
 <div id="projects">
     <div class="container">
         <div class="experience-group">
+            <h2>Industry</h2>
+            <div class="experience-carousel" data-carousel>
+                <button class="carousel-btn carousel-btn-left" type="button" aria-label="Previous industry experience"><i class="fa-solid fa-chevron-left"></i></button>
+                <div class="carousel-viewport">
+                    <div class="experience-track">
+                        <article class="experience-card">
+                            <img src="Science/science-wordmark.svg" class="company-title-logo" alt="Science Corp logo" loading="lazy">
+                            <img src="Science/biohybrid.webp" alt="Science Corp biohybrid BCI system" loading="lazy">
+                            <p>Protein Engineering Intern on the biohybrid BCI team. Screened ~20,000 KR2 opsin variants on Galago, generating libraries via error-prone PCR, assembly, and transformation. Automated colony picking across 25 384-well plates on a Hamilton liquid handler and built a Nanopore pipeline for library sequencing. Designed and verified dual-expression opsin plasmids enabling parallel characterization in E. coli and mammalian cell lines.</p>
+                        </article>
+                        <article class="experience-card">
+                            <img src="amazon/amazonlogo.png" class="company-title-logo" alt="Amazon logo" loading="lazy">
+                            <img src="amazon/device.jpg" alt="Amazon Devices team product image" loading="lazy">
+                            <p>SDE Intern on the Devices team. Developed and optimized C++ middleware services powering Alexa voice experiences across Fire TV devices, reducing memory usage and improving runtime reliability. Wrote technical design documents and drove cross-team integration for a C++ feature spanning multiple Fire TV services and interfaces.</p>
+                        </article>
+                        <article class="experience-card">
+                            <img src="brainCo/bclogo.png" class="company-title-logo" alt="BrainCo logo" loading="lazy">
+                            <img src="brainCo/glass.webp" alt="BrainCo smart glasses image" loading="lazy">
+                            <p>Built a calorie detection app by integrating smart glasses image capture, cloud-based calorie estimation, and frontend UI. Tested computer vision models including YOLOv8, SAM, and Depth Anything, and worked with vendors on camera requirements, cost, and hardware constraints.</p>
+                        </article>
+                        <article class="experience-card">
+                            <img src="tetsuwan/tetlogo.png" class="company-title-logo" alt="Tetsuwan Scientific logo" loading="lazy">
+                            <img src="images/tetsuwan.PNG" alt="Tetsuwan Scientific lab automation work" loading="lazy">
+                            <p>Helped build AI-scientist systems to automate life science research, including bacterial transformation, Nanopore sequencing, colony picking, and custom lab automation tools.</p>
+                            <a href="https://www.linkedin.com/feed/update/urn:li:activity:7368795719849123840/">Lab Auto Wiki</a>
+                        </article>
+                        <article class="experience-card">
+                            <i class="fa-brands fa-apple"></i>
+                            <img src="images/apple.jpg" alt="Apple Greater China internship image" loading="lazy">
+                            <p>Built Prophet-based forecasting for 15-week Mac sales, improved MAPE by 56%, and incorporated the final model into the data team's prediction workflow.</p>
+                        </article>
+                    </div>
+                </div>
+                <button class="carousel-btn carousel-btn-right" type="button" aria-label="Next industry experience"><i class="fa-solid fa-chevron-right"></i></button>
+            </div>
+        </div>
+
+        <div class="experience-group">
             <h2>Research</h2>
             <div class="experience-carousel" data-carousel>
                 <button class="carousel-btn carousel-btn-left" type="button" aria-label="Previous research experience"><i class="fa-solid fa-chevron-left"></i></button>
@@ -150,44 +189,6 @@
                     </div>
                 </div>
                 <button class="carousel-btn carousel-btn-right" type="button" aria-label="Next research experience"><i class="fa-solid fa-chevron-right"></i></button>
-            </div>
-        </div>
-
-        <div class="experience-group">
-            <h2>Industry</h2>
-            <div class="experience-carousel" data-carousel>
-                <button class="carousel-btn carousel-btn-left" type="button" aria-label="Previous industry experience"><i class="fa-solid fa-chevron-left"></i></button>
-                <div class="carousel-viewport">
-                    <div class="experience-track">
-                        <article class="experience-card">
-                            <img src="Science/science-wordmark.svg" class="company-title-logo" alt="Science Corp logo" loading="lazy">
-                            <img src="Science/biohybrid.webp" alt="Science Corp biohybrid BCI system" loading="lazy">
-                            <p>Incoming Protein Engineering Intern on the biohybrid BCI team. I will work on automating and improving the throughput of rhodopsin discovery assays for next-generation neural interface systems.</p>
-                        </article>
-                        <article class="experience-card">
-                            <img src="amazon/amazonlogo.png" class="company-title-logo" alt="Amazon logo" loading="lazy">
-                            <img src="amazon/device.jpg" alt="Amazon Devices team product image" loading="lazy">
-                            <p>Incoming SDE Intern on the Devices team. I will work on bridging Alexa capabilities with Fire TV to create more seamless voice-driven entertainment experiences.</p>
-                        </article>
-                        <article class="experience-card">
-                            <img src="brainCo/bclogo.png" class="company-title-logo" alt="BrainCo logo" loading="lazy">
-                            <img src="brainCo/glass.webp" alt="BrainCo smart glasses image" loading="lazy">
-                            <p>Built a calorie detection app by integrating smart glasses image capture, cloud-based calorie estimation, and frontend UI. Tested computer vision models including YOLOv8, SAM, and Depth Anything, and worked with vendors on camera requirements, cost, and hardware constraints.</p>
-                        </article>
-                        <article class="experience-card">
-                            <img src="tetsuwan/tetlogo.png" class="company-title-logo" alt="Tetsuwan Scientific logo" loading="lazy">
-                            <img src="images/tetsuwan.PNG" alt="Tetsuwan Scientific lab automation work" loading="lazy">
-                            <p>Helped build AI-scientist systems to automate life science research, including bacterial transformation, Nanopore sequencing, colony picking, and custom lab automation tools.</p>
-                            <a href="https://www.linkedin.com/feed/update/urn:li:activity:7368795719849123840/">Lab Auto Wiki</a>
-                        </article>
-                        <article class="experience-card">
-                            <i class="fa-brands fa-apple"></i>
-                            <img src="images/apple.jpg" alt="Apple Greater China internship image" loading="lazy">
-                            <p>Built Prophet-based forecasting for 15-week Mac sales, improved MAPE by 56%, and incorporated the final model into the data team's prediction workflow.</p>
-                        </article>
-                    </div>
-                </div>
-                <button class="carousel-btn carousel-btn-right" type="button" aria-label="Next industry experience"><i class="fa-solid fa-chevron-right"></i></button>
             </div>
         </div>
 
