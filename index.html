@@ -36,7 +36,10 @@
     <div class="container">
         <div class="row"> 
             <div class="about-col-1">
-                <img src="images/bowen.jpg" alt="Portrait of Bowen Jiang">
+                <div class="about-img-wrap">
+                    <img src="images/bowen.jpg" alt="Portrait of Bowen Jiang" class="about-img about-img-base">
+                    <img src="images/bowen2.png" alt="" aria-hidden="true" class="about-img about-img-hover" loading="lazy">
+                </div>
             </div>
             <div class="about-col-2">
                 <h1 class="sub-title">About Me</h1>
@@ -199,10 +202,10 @@
                 <div class="carousel-viewport">
                     <div class="experience-track">
                         <article class="experience-card project-card">
-                            <a class="project-logo-link" href="https://wind-landing.vercel.app/" target="_blank" rel="noopener noreferrer" aria-label="Open Wind project page">
-                                <img src="wind/wind.png" alt="Wind project logo" loading="lazy">
+                            <a class="project-logo-link" href="https://www.useopenwallet.com/" target="_blank" rel="noopener noreferrer" aria-label="Open OpenWallet project page">
+                                <img src="openwallet/openwallet.png" alt="OpenWallet project logo" loading="lazy">
                             </a>
-                            <p>Wind - AI wallet for the next generation of consumer AI applications.</p>
+                            <p>OpenWallet - AI wallet for the next generation of consumer AI applications.</p>
                         </article>
                         <article class="experience-card project-card">
                             <a class="project-logo-link" href="tryit.html" aria-label="Open TryIt project page">
@@ -290,9 +293,14 @@
             </div>
         </div>
     </div>
-    <div class="copyright">
-        <p> Copyright <i class="fa-regular fa-copyright"></i> Bowen Jiang</p>
-    </div>
+    <footer class="copyright">
+        <div class="footer-bar">
+            <span class="footer-copy">&copy; 2026 Bowen Jiang</span>
+        </div>
+        <svg class="footer-wordmark" viewBox="0 0 1000 224" preserveAspectRatio="xMidYMax meet" aria-hidden="true">
+            <text x="0" y="212" textLength="1000" lengthAdjust="spacingAndGlyphs">BOWEN</text>
+        </svg>
+    </footer>
  </div>
 
 
@@ -410,6 +418,40 @@
         .catch(error => console.error('Error!', error.message))
     })
 </script>
-    
+
+<script>
+    // Fade sections in/out as they enter and leave the viewport
+    const revealSelectors = [
+        "#about .about-col-1",
+        "#about .about-col-2",
+        ".experience-group",
+        "#portfolio .sub-title",
+        "#portfolio .work",
+        "#contact .contact-left",
+        "#contact .contact-right"
+    ];
+
+    const revealTargets = document.querySelectorAll(revealSelectors.join(", "));
+    revealTargets.forEach(el => el.classList.add("reveal"));
+
+    // Stagger the hobby cards so they cascade in
+    document.querySelectorAll("#portfolio .work").forEach((el, i) => {
+        el.style.transitionDelay = (i * 0.12) + "s";
+    });
+
+    if ("IntersectionObserver" in window) {
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                entry.target.classList.toggle("is-visible", entry.isIntersecting);
+            });
+        }, { threshold: 0.15, rootMargin: "0px 0px -8% 0px" });
+
+        revealTargets.forEach(el => revealObserver.observe(el));
+    } else {
+        // Fallback: no observer support, just show everything
+        revealTargets.forEach(el => el.classList.add("is-visible"));
+    }
+</script>
+
 </body>
 </html>
